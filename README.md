@@ -40,7 +40,7 @@
       - Create Schema for database
       - Create burgers table
       - Make types according to the scheme
-      - devoured column set to false by default
+      - eaten column set to false by default
 
   2.  Handlebars/express
 
