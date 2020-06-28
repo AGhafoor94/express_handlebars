@@ -22,20 +22,18 @@
 
 - Add Database
 
-- Connect to database (burgers_db)
-
-- Create table (burgers)
+* Create table (burgers)
 
   - Columns: id (INT AUTO_INCREMENT NOT NULL PRIMARY KEY), burger_name (VARCHAR(40) NOT NULL), devoured (TINYINT NOT NULL)
 
-- Add Controller
+* Add Controller
 
-- Public folder
+* Public folder
 
   - CSS
   - jQuery/Javascript?
 
-- Steps:
+* Steps:
 
   1.  Database
 
@@ -82,3 +80,5 @@
 - Install express, handlebars and mysql
 
 - add .gitignore
+
+- Connected to database (burgers_db)
