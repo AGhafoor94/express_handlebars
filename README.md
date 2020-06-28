@@ -16,14 +16,6 @@
 
 ## To Do
 
-- Set up folders
-
-- Initialize node
-
-- Install express, handlebars and mysql
-
-- add .gitignore
-
 - Add routes
 
 - Add ORM
@@ -82,3 +74,11 @@
     - Frontend --> Press Devour --> Controller --> Model --> ORM --> Database
 
 # Done
+
+- Set up folders
+
+- Initialize node
+
+- Install express, handlebars and mysql
+
+- add .gitignore
