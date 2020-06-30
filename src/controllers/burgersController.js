@@ -11,7 +11,9 @@ const getBurgers = (req, res) => {
     res.render("index", value);
   });
 };
-
+const sendPublic = (req, res) => {
+  res.sendFile("../public/css/bulma.css");
+};
 const postBurgers = (req, res) => {
   console.log(`Create new burger ${req.body}`);
   const { burger_name } = req.body.burger_name;
@@ -30,6 +32,7 @@ const updateBurgers = (req, res) => {
 };
 
 router.get("/burgers", getBurgers);
+router.get("/public", sendPublic);
 router.post("/api/burgers", postBurgers);
 router.put("/api/burgers?id", updateBurgers);
 
