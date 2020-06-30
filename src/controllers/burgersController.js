@@ -6,8 +6,9 @@ const router = express.Router();
 const getBurgers = (req, res) => {
   burgers.all((result) => {
     const value = {
-      burger_name: result,
+      burgers: result,
     };
+    console.log(value);
     res.render("index", value);
   });
 };

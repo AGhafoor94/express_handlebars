@@ -1,7 +1,16 @@
-<h1>Burgers</h1>
-
-<ul>
-    {{#each burgers}}
-    {{>burgers-block eaten=0}}
-    {{/each}}
-</ul>
+{{> modal}}
+<section class="hero is-medium is-dark is-bold">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                Burgers
+            </h1>
+            <h2 class="subtitle">
+                <button class="button is-warning">Add Burger</button>
+            </h2>
+        </div>
+    </div>
+</section>
+{{#each burgers}}
+{{> burgers-block }}
+{{/each}}
