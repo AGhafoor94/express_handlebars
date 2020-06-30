@@ -35,37 +35,30 @@
 
 * Steps:
 
-  1.  Database
+2.  Handlebars/express
 
-      - Create Schema for database
-      - Create burgers table
-      - Make types according to the scheme
-      - eaten column set to false by default
+    - MySql Adapter
+    - Setup connection
 
-  2.  Handlebars/express
+3.  Splitting connection and ORM
 
-      - MySql Adapter
-      - Setup connection
+    - MySQL connection in connection.js
+    - Methods in orm.js
 
-  3.  Splitting connection and ORM
+4.  Set up Routes
 
-      - MySQL connection in connection.js
-      - Methods in orm.js
+    - CRUD
+      - GET /burgers (get a burger)
+      - POST /burgers (create a burger)
+      - PUT /burgers (devour burger)
 
-  4.  Set up Routes
+5.  Front End
 
-      - CRUD
-        - GET /burgers (get a burger)
-        - POST /burgers (create a burger)
-        - PUT /burgers (devour burger)
-
-  5.  Front End
-
-      - Set up main.handlebars with html template
-      - Set up index.handlebars
-        - CSS, possible jQuery
-        - Form
-        - Button to devour
+    - Set up main.handlebars with html template
+    - Set up index.handlebars
+      - CSS, possible jQuery
+      - Form
+      - Button to devour
 
 #### DATA FLOW
 
@@ -82,3 +75,10 @@
 - add .gitignore
 
 - Connected to database (burgers_db)
+
+1.  Database
+
+    - Create Schema for database
+    - Create burgers table
+    - Make types according to the scheme
+    - eaten column set to false by default
