@@ -4,7 +4,7 @@ const options = {
   host: "localhost",
   port: 3306,
   user: "root",
-  password: "",
+  password: "W@t3rB0ttle",
   database: "burgers_db",
 };
 
@@ -17,4 +17,4 @@ const onConnect = (err) => {
 
 connection.connect(onConnect);
 
-module.exports = onConnect;
+module.exports = connection;

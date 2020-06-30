@@ -1,13 +1,12 @@
 const express = require("express");
-const burgerModel = require("../models/burgersModel");
 const burgers = require("../models/burgersModel");
 
-const app = express();
+const router = express.Router();
 
 const getBurgers = (req, res) => {
-  burgerModel.all((data) => {
+  burgers.all((result) => {
     const value = {
-      burgers: data,
+      burger_name: result,
     };
     res.render("index", value);
   });
@@ -22,7 +21,7 @@ const postBurgers = (req, res) => {
   const callbackFunction = (result) => {
     res.send(200);
   };
-  burgerModel.create(value, callbackFunction);
+  burgers.create(value, callbackFunction);
 };
 
 const updateBurgers = (req, res) => {
@@ -30,8 +29,8 @@ const updateBurgers = (req, res) => {
   res.send("done");
 };
 
-app.get("/burgers", getBurgers);
-app.post("/api/burgers", postBurgers);
-app.put("/api/burgers?id", updateBurgers);
+router.get("/burgers", getBurgers);
+router.post("/api/burgers", postBurgers);
+router.put("/api/burgers?id", updateBurgers);
 
-module.exports = app;
+module.exports = router;

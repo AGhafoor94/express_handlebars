@@ -2,6 +2,10 @@
 
 <div>
     <ul>
-
+        {{#each burgers}}
+        {{#unless eaten}}
+        {{>bugers-block eaten=false}}
+        {{/unless}}
+        {{/each}}
     </ul>
 </div>

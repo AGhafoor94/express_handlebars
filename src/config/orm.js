@@ -1,4 +1,4 @@
-const connection = require("../config/connection");
+const { connection } = require("../config/connection");
 
 // Still need to add parameters for create and update and queries
 
@@ -28,4 +28,4 @@ const orm = {
   update,
 };
 
-modules.exports = orm;
+module.exports = orm;
