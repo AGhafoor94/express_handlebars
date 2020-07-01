@@ -14,3 +14,24 @@
   width: 18%;
   display: inline-block;
 }
+.subtitle {
+  padding-top: 20px;
+}
+.list {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+.burgerList {
+  padding: 5px;
+  width: 50%;
+  border: 2px solid orange;
+}
+.eatenBurgerList {
+  padding: 5px;
+  width: 50%;
+  border: 2px solid orange;
+}
+.name {
+  padding-right: 5px;
+}

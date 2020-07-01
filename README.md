@@ -16,34 +16,7 @@
 
 ## To Do
 
-- Add routes
-
-- Add ORM
-
-- Add Database
-
-* Create table (burgers)
-
-  - Columns: id (INT AUTO_INCREMENT NOT NULL PRIMARY KEY), burger_name (VARCHAR(40) NOT NULL), devoured (TINYINT NOT NULL)
-
-* Add Controller
-
-* Public folder
-
-  - CSS
-  - jQuery/Javascript?
-
-* Steps:
-
-2.  Handlebars/express
-
-    - MySql Adapter
-    - Setup connection
-
-3.  Splitting connection and ORM
-
-    - MySQL connection in connection.js
-    - Methods in orm.js
+- Steps:
 
 4.  Set up Routes
 
@@ -76,9 +49,36 @@
 
 - Connected to database (burgers_db)
 
+- Added routes
+
+- Added ORM
+
+- Added Database
+
+* Created table (burgers)
+
+  - Columns: id (INT AUTO_INCREMENT NOT NULL PRIMARY KEY), burger_name (VARCHAR(40) NOT NULL), devoured (TINYINT NOT NULL)
+
+* Added Controller
+
+* Public folder
+
+  - CSS
+  - Javascript
+
 1.  Database
 
     - Create Schema for database
     - Create burgers table
     - Make types according to the scheme
     - eaten column set to false by default
+
+2.  Handlebars/express
+
+    - MySql Adapter
+    - Setup connection
+
+3.  Splitting connection and ORM
+
+    - MySQL connection in connection.js
+    - Methods in orm.js

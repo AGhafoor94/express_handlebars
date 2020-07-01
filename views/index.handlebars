@@ -5,12 +5,14 @@
             <h1 class="title">
                 Burgers
             </h1>
-            <h2 class="subtitle">
+            <h2 class="subtitle addBurger">
                 <button id="displayModal" class="button is-warning">Add Burger</button>
             </h2>
         </div>
     </div>
 </section>
-{{#each burgers}}
-{{> burgers-block }}
-{{/each}}
+<ul class="list">
+    {{#each burgers}}
+    {{> burgers-block }}
+    {{/each}}
+</ul>
