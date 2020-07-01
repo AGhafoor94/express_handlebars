@@ -17,14 +17,11 @@ const sendPublic = (req, res) => {
 };
 const postBurgers = (req, res) => {
   console.log(`Create new burger ${req.body}`);
-  const { burger_name } = req.body.burger_name;
-  const value = {
-    burger_name,
-  };
+  const burgerName = req.body.burger_name;
   const callbackFunction = (result) => {
-    res.send(200);
+    res.status(300).redirect("/burgers");
   };
-  burgers.create(value, callbackFunction);
+  burgers.create("burger_name", burgerName, callbackFunction);
 };
 
 const updateBurgers = (req, res) => {

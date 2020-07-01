@@ -11,8 +11,8 @@ const orm = {
     };
     connection.query(query, onQuery);
   },
-  create: (table, value, callbackFunction) => {
-    const query = `insert into ${table} values ${value}`;
+  create: (table, columnName, value, callbackFunction) => {
+    const query = `insert into ${table} (${columnName}) values ("${value}")`;
     const onQuery = (err, res) => {
       if (err) throw err;
       callbackFunction(res);

@@ -8,8 +8,8 @@ const burgers = {
       callbackFunction(res);
     });
   },
-  create: (value, callbackFunction) => {
-    orm.create("burgers", value, (res) => {
+  create: (column, value, callbackFunction) => {
+    orm.create("burgers", column, value, (res) => {
       callbackFunction(res);
     });
   },
