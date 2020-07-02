@@ -13,8 +13,8 @@ const burgers = {
       callbackFunction(res);
     });
   },
-  update: (callbackFunction) => {
-    orm.update("burgers", (res) => {
+  update: (column, value, id, callbackFunction) => {
+    orm.update("burgers", column, value, id, (res) => {
       callbackFunction(res);
     });
   },

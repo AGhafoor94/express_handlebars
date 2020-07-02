@@ -25,7 +25,11 @@ const postBurgers = (req, res) => {
 };
 
 const updateBurgers = (req, res) => {
-  console.log(req.params);
+  burgers.update("burger_name", "eaten", true);
+  const eatButton = document.querySelector(".eatBtn");
+  eatButton.addEventListener("click", (event) => {
+    console.log("eatButton.dataset.id");
+  });
   res.send("done");
 };
 

@@ -15,6 +15,10 @@ app.use("/public", express.static(__dirname + "/public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(controller);
+app.set({
+  "Access-Control-Allow-Origin": "*",
+  "X-Content-Type-Options": "nosniff",
+});
 
 // Setting up handlebar engine and setting it to the main as default
 

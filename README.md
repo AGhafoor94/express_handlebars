@@ -41,11 +41,11 @@
 
 - Set up folders
 
-- Initialize node
+- Initialized node
 
-- Install express, handlebars and mysql
+- Installed express, handlebars and mysql
 
-- add .gitignore
+- added .gitignore
 
 - Connected to database (burgers_db)
 
@@ -57,7 +57,10 @@
 
 * Created table (burgers)
 
-  - Columns: id (INT AUTO_INCREMENT NOT NULL PRIMARY KEY), burger_name (VARCHAR(40) NOT NULL), devoured (TINYINT NOT NULL)
+  - Columns:
+    - id (INT AUTO_INCREMENT NOT NULL PRIMARY KEY),
+    - burger_name (VARCHAR(40) NOT NULL),
+    - eaten (TINYINT NOT NULL)
 
 * Added Controller
 
@@ -68,9 +71,9 @@
 
 1.  Database
 
-    - Create Schema for database
-    - Create burgers table
-    - Make types according to the scheme
+    - Created Schema for database
+    - Created burgers table
+    - Made types according to the scheme
     - eaten column set to false by default
 
 2.  Handlebars/express

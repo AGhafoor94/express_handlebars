@@ -1,11 +1,6 @@
-{{#unless eaten}}
 <li class="burgerList">
     <span class="subtitle name">{{burger_name}}</span>
-    <button class="button is-danger eatBtn" data-id="{{id}}" data-eaten="{{eaten}}">Eat</button>
+    <button onClick="updateItem(this)" class="button is-danger eatBtn" data-id="{{id}}"
+        data-eaten="{{eaten}}">Eat</button>
+
 </li>
-{{#if eaten}}
-<li class="eatenBurgerList">
-    {{burger_name}}
-</li>
-{{/if}}
-{{/unless}}
