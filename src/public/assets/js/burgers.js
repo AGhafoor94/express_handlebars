@@ -14,12 +14,19 @@ const hideModal = (event) => {
   modal.classList.add("displayNone");
   modal.classList.remove("displayBlock");
 };
-const eatenValue = {
-  eaten: true,
-};
 const updateItem = (element) => {
   const id = element.getAttribute("data-id");
-  console.log(id);
+  const eaten = element.getAttribute("data-eaten");
+  const eatenValue = {
+    eaten: true,
+  };
+  $.ajax({
+    method: "PUT",
+    url: `/api/burgers?id=${id}`,
+    data: {
+      eatenValue,
+    },
+  }).then(console.log(id));
 };
 displayModalButton.addEventListener("click", displayModal);
 closeModal.addEventListener("click", hideModal);

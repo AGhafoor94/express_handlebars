@@ -12,30 +12,32 @@ const getBurgers = (req, res) => {
     res.render("index", value);
   });
 };
-const sendPublic = (req, res) => {
+const sendPublicFolder = (req, res) => {
   res.sendFile("../public/css/bulma.css");
 };
 const postBurgers = (req, res) => {
-  console.log(`Create new burger ${req.body}`);
   const burgerName = req.body.burger_name;
+
   const callbackFunction = (result) => {
     res.status(300).redirect("/burgers");
   };
+
   burgers.create("burger_name", burgerName, callbackFunction);
 };
 
 const updateBurgers = (req, res) => {
-  burgers.update("burger_name", "eaten", true);
-  const eatButton = document.querySelector(".eatBtn");
-  eatButton.addEventListener("click", (event) => {
-    console.log("eatButton.dataset.id");
-  });
-  res.send("done");
+  const { id } = req.query;
+  console.log(id);
+  const callbackFunction = (result) => {
+    res.redirect("/burgers");
+  };
+
+  burgers.update("eaten", true, id, callbackFunction);
 };
 
 router.get("/burgers", getBurgers);
-router.get("/public", sendPublic);
+router.get("/public", sendPublicFolder);
 router.post("/api/burgers", postBurgers);
-router.put("/api/burgers?id", updateBurgers);
+router.put("/api/burgers?id=id", updateBurgers);
 
 module.exports = router;
