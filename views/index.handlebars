@@ -5,14 +5,19 @@
             <h1 class="title">
                 Burgers
             </h1>
-            <h2 class="subtitle addBurger">
-                <button id="displayModal" class="button is-warning">Add Burger</button>
-            </h2>
+            <button id="displayModal" class="button is-warning">Add Burger</button>
         </div>
     </div>
 </section>
-<ul class="list">
-    {{#each burgers}}
-    {{> burgers-block }}
-    {{/each}}
-</ul>
+<div class="columns">
+    <ul class="column is-half">
+        {{#each burgers}}
+        {{> burgers-notEaten}}
+        {{/each}}
+    </ul>
+    <ul class="column is-half">
+        {{#each burgers}}
+        {{> burgers-eaten}}
+        {{/each}}
+    </ul>
+</div>

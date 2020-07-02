@@ -26,18 +26,19 @@ const postBurgers = (req, res) => {
 };
 
 const updateBurgers = (req, res) => {
-  const { id } = req.query;
-  console.log(id);
+  const { id } = req.params;
+  const column = "eaten";
   const callbackFunction = (result) => {
-    res.redirect("/burgers");
+    res.json(result);
   };
 
-  burgers.update("eaten", true, id, callbackFunction);
+  burgers.update(column, id, callbackFunction);
 };
 
 router.get("/burgers", getBurgers);
 router.get("/public", sendPublicFolder);
+router.get("/api/burgers", getBurgers);
 router.post("/api/burgers", postBurgers);
-router.put("/api/burgers?id=id", updateBurgers);
+router.put("/api/burgers/:id", updateBurgers);
 
 module.exports = router;

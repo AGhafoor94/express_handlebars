@@ -4,6 +4,9 @@
 .displayBlock {
   display: block;
 }
+.title {
+  text-align: center;
+}
 .burgerInput {
   width: 80%;
   margin-top: 20%;
@@ -17,16 +20,14 @@
 .subtitle {
   padding-top: 20px;
 }
-.list {
-  width: 80%;
-  margin: 0 auto;
-  display: block;
-}
-.burgerList {
-  padding: 5px;
-  width: 50%;
-  border: 2px solid orange;
-}
 .name {
   padding-right: 5px;
+}
+.columns {
+  margin: 0 auto;
+  display: block;
+  padding: 10px;
+}
+.eatenBurgerList {
+  padding: 5px;
 }

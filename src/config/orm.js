@@ -19,8 +19,8 @@ const orm = {
     };
     connection.query(query, onQuery);
   },
-  update: (table, column, value, id, callbackFunction) => {
-    const query = `update ${table} set ${column} = ${value} where ${id}`;
+  update: (table, column, id, callbackFunction) => {
+    const query = `update ${table} set ${column} = true where id = ${id}`;
     const onQuery = (err, res) => {
       if (err) throw err;
       callbackFunction(res);
