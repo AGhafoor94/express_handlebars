@@ -1,5 +1,6 @@
 {{#if eaten}}
 <li class="eatenBurgerList">
     <span class="subtitle name">{{burger_name}}</span>
+    <button onClick="deleteItem(this)" class="button is-danger deleteBtn" data-id="{{id}}">Delete</button>
 </li>
 {{/if}}

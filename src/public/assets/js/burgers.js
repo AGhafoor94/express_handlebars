@@ -23,6 +23,15 @@ const updateItem = (element) => {
   });
 };
 
+const deleteItem = (element) => {
+  const id = element.getAttribute("data-id");
+  console.log(id);
+  $.ajax({
+    url: `/api/burgers/${id}`,
+    type: "DELETE",
+  });
+};
+
 displayModalButton.addEventListener("click", displayModal);
 closeModal.addEventListener("click", hideModal);
 submitBtn.addEventListener("click", hideModal);

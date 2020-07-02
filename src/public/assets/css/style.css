@@ -4,8 +4,20 @@
 .displayBlock {
   display: block;
 }
+.hero {
+  border-bottom: 2px solid orange;
+}
 .title {
   text-align: center;
+}
+#displayModal {
+  margin: 0 auto;
+  display: block;
+}
+.headers {
+  text-align: center;
+  text-decoration: underline;
+  font-weight: 700;
 }
 .burgerInput {
   width: 80%;

@@ -18,6 +18,11 @@ const burgers = {
       callbackFunction(res);
     });
   },
+  delete: (table, id, callbackFunction) => {
+    orm.delete(table, id, (res) => {
+      callbackFunction(res);
+    });
+  },
 };
 
 module.exports = burgers;

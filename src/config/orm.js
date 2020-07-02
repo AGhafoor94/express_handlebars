@@ -27,6 +27,14 @@ const orm = {
     };
     connection.query(query, onQuery);
   },
+  delete: (table, id, callbackFunction) => {
+    const query = `delete from ${table} where id = ${id}`;
+    const onQuery = (err, res) => {
+      if (err) throw err;
+      callbackFunction(res);
+    };
+    connection.query(query, onQuery);
+  },
 };
 
 module.exports = orm;
