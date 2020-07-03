@@ -26,7 +26,7 @@ const updateBurgers = (req, res) => {
   const { id } = req.params;
   const column = "eaten";
   const callbackFunction = (result) => {
-    res.render("index", result);
+    res.send(result);
   };
   burgers.update(column, id, callbackFunction);
 };
@@ -35,7 +35,7 @@ const deleteBurger = (req, res) => {
   const { id } = req.params;
   const table = "burgers";
   const callbackFunction = (result) => {
-    res.render("index", result);
+    res.send(result);
   };
   burgers.delete(table, id, callbackFunction);
 };
