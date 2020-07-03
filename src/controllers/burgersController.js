@@ -17,7 +17,7 @@ const sendPublicFolder = (req, res) => {
 const postBurgers = (req, res) => {
   const { burger_name } = req.body;
   const callbackFunction = (result) => {
-    res.redirect("/burgers");
+    res.render("index", result);
   };
   burgers.create("burger_name", burger_name, callbackFunction);
 };
@@ -26,7 +26,7 @@ const updateBurgers = (req, res) => {
   const { id } = req.params;
   const column = "eaten";
   const callbackFunction = (result) => {
-    res.redirect("/api/burgers");
+    res.render("index", result);
   };
   burgers.update(column, id, callbackFunction);
 };
