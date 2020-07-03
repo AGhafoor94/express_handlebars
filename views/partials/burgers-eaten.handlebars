@@ -3,8 +3,10 @@
     <div class="card-content leftBorder">
         <li class="eatenBurgerList">
             <p class="subtitle name">{{burger_name}}</p>
-            <button onClick="deleteItem(this)" class="button is-danger deleteBtn reloadButton" type="submit" </a>
-                data-id="{{id}}"><a href="/api/burgers" style="width: 100%">Delete</button>
+            <form action="/api/burgers" method="DELETE">
+                <button style="width: 100%" onClick="deleteItem(this)" class="button is-danger deleteBtn reloadButton"
+                    type="submit" data-id="{{id}}">Delete</button>
+            </form>
         </li>
     </div>
 </div>
