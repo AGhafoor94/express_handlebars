@@ -1,0 +1,59 @@
+.displayNone {
+  display: none;
+}
+.displayBlock {
+  display: block;
+}
+.hero {
+  border-bottom: 2px solid orange;
+}
+.title {
+  text-align: center;
+}
+.subtitle {
+  padding-top: 20px;
+}
+#displayModal {
+  margin: 0 auto;
+  display: block;
+}
+.headers {
+  text-align: center;
+  text-decoration: underline;
+  font-weight: 700;
+}
+.burgerInput {
+  width: 80%;
+  margin-top: 20%;
+  display: inline-block;
+}
+.submitBtn {
+  margin-top: 20%;
+  width: 18%;
+  display: inline-block;
+}
+.addBurgerBtn:hover {
+  background-color: #ffdb4a;
+}
+.columns {
+  margin: 0 auto;
+  display: block;
+  padding: 10px;
+}
+.name {
+  text-align: center;
+}
+.reloadButton {
+  width: 100%;
+}
+.card {
+  margin-top: 10px;
+}
+.rightBorder {
+  border-right: 2px solid #ffdb4a;
+  height: 100%;
+}
+.leftBorder {
+  border-left: 2px solid #ffdb4a;
+  height: 100%;
+}
