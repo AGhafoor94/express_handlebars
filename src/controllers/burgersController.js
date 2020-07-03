@@ -26,7 +26,7 @@ const updateBurgers = (req, res) => {
   const { id } = req.params;
   const column = "eaten";
   const callbackFunction = (result) => {
-    res.redirect(200, "/burgers");
+    res.redirect("/api/burgers");
   };
   burgers.update(column, id, callbackFunction);
 };
@@ -35,7 +35,7 @@ const deleteBurger = (req, res) => {
   const { id } = req.params;
   const table = "burgers";
   const callbackFunction = (result) => {
-    res.redirect("/burgers");
+    res.redirect("/api/burgers");
   };
   burgers.delete(table, id, callbackFunction);
 };
