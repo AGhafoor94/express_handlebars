@@ -47,5 +47,13 @@
   width: 100%;
 }
 .card {
-  margin-top: 5px;
+  margin-top: 10px;
+}
+.rightBorder {
+  border-right: 2px solid #ffdb4a;
+  height: 100%;
+}
+.leftBorder {
+  border-left: 2px solid #ffdb4a;
+  height: 100%;
 }

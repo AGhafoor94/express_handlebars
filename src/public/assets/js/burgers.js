@@ -1,3 +1,4 @@
+const body = document.querySelector(".body");
 const displayModalButton = document.getElementById("displayModal");
 const closeModal = document.querySelector(".modal-close");
 const submitBtn = document.querySelector(".submitBtn");
