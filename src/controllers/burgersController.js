@@ -40,6 +40,7 @@ const deleteBurger = (req, res) => {
   burgers.delete(table, id, callbackFunction);
 };
 
+router.get("/", getBurgers);
 router.get("/burgers", getBurgers);
 router.get("/public", sendPublicFolder);
 router.get("/api/burgers", getBurgers);
