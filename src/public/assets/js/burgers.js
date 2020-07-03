@@ -26,7 +26,6 @@ const updateItem = (element) => {
 
 const deleteItem = (element) => {
   const id = element.getAttribute("data-id");
-  console.log(id);
   $.ajax({
     url: `/api/burgers/${id}`,
     type: "DELETE",

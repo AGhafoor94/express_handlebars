@@ -8,7 +8,6 @@ const getBurgers = (req, res) => {
     const value = {
       burgers: result,
     };
-    console.log(value);
     res.render("index", value);
   });
 };
@@ -18,7 +17,7 @@ const sendPublicFolder = (req, res) => {
 const postBurgers = (req, res) => {
   const { burger_name } = req.body;
   const callbackFunction = (result) => {
-    res.redirect("/burgers");
+    res.redirect("/api/burgers");
   };
   burgers.create("burger_name", burger_name, callbackFunction);
 };
@@ -27,7 +26,7 @@ const updateBurgers = (req, res) => {
   const { id } = req.params;
   const column = "eaten";
   const callbackFunction = (result) => {
-    res.redirect(304, "/api/burgers");
+    res.redirect(200, "/api/burgers");
   };
   burgers.update(column, id, callbackFunction);
 };
@@ -36,7 +35,7 @@ const deleteBurger = (req, res) => {
   const { id } = req.params;
   const table = "burgers";
   const callbackFunction = (result) => {
-    res.redirect(304, "/api/burgers");
+    res.redirect("/api/burgers");
   };
   burgers.delete(table, id, callbackFunction);
 };

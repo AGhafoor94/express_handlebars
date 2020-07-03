@@ -18,21 +18,6 @@
 
 - Steps:
 
-4.  Set up Routes
-
-    - CRUD
-      - GET /burgers (get a burger)
-      - POST /burgers (create a burger)
-      - PUT /burgers (devour burger)
-
-5.  Front End
-
-    - Set up main.handlebars with html template
-    - Set up index.handlebars
-      - CSS, possible jQuery
-      - Form
-      - Button to devour
-
 #### DATA FLOW
 
     - Frontend --> Press Devour --> Controller --> Model --> ORM --> Database
@@ -85,3 +70,19 @@
 
     - MySQL connection in connection.js
     - Methods in orm.js
+
+4.  Set up Routes
+
+    - CRUD
+      - GET /burgers (get a burger)
+      - POST /api/burgers (create a burger)
+      - PUT /api/burgers (eat burger)
+      - DELETE /api/burgers (delete burger)
+
+5.  Front End
+
+    - Set up main.handlebars with html template
+    - Set up index.handlebars
+      - CSS, possible jQuery
+      - Form
+      - Button to eat
