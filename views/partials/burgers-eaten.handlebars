@@ -1,6 +1,10 @@
 {{#if eaten}}
 <li class="eatenBurgerList">
     <span class="subtitle name">{{burger_name}}</span>
-    <button onClick="deleteItem(this)" class="button is-danger deleteBtn" data-id="{{id}}">Delete</button>
+    <form action="/api/burgers" method="DELETE">
+
+        <button onClick="deleteItem(this)" class="button is-danger deleteBtn reloadButton" type="submit"
+            data-id="{{id}}">Delete</button>
+    </form>
 </li>
 {{/if}}

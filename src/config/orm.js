@@ -21,9 +21,9 @@ const orm = {
   },
   update: (table, column, id, callbackFunction) => {
     const query = `update ${table} set ${column} = true where id = ${id}`;
-    const onQuery = (err, res) => {
+    const onQuery = (err, result) => {
       if (err) throw err;
-      callbackFunction(res);
+      callbackFunction(result);
     };
     connection.query(query, onQuery);
   },

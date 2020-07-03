@@ -16,18 +16,18 @@ const sendPublicFolder = (req, res) => {
   res.sendFile("../public/css/bulma.css");
 };
 const postBurgers = (req, res) => {
-  const burgerName = req.body.burger_name;
+  const { burger_name } = req.body;
   const callbackFunction = (result) => {
-    res.status(300).redirect("/burgers");
+    res.redirect("/burgers");
   };
-  burgers.create("burger_name", burgerName, callbackFunction);
+  burgers.create("burger_name", burger_name, callbackFunction);
 };
 
 const updateBurgers = (req, res) => {
   const { id } = req.params;
   const column = "eaten";
   const callbackFunction = (result) => {
-    res.json(result);
+    res.redirect(304, "/api/burgers");
   };
   burgers.update(column, id, callbackFunction);
 };
@@ -36,7 +36,7 @@ const deleteBurger = (req, res) => {
   const { id } = req.params;
   const table = "burgers";
   const callbackFunction = (result) => {
-    res.redirect("/burgers");
+    res.redirect(304, "/api/burgers");
   };
   burgers.delete(table, id, callbackFunction);
 };
