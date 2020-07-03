@@ -26,5 +26,5 @@ app.engine("handlebars", expressHandlebar({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 app.listen(PORT, () => {
-  console.log(`Listening on port: http://localhost:${PORT}`);
+  console.log(`Listening on port: http://localhost:${PORT}/burgers`);
 });
