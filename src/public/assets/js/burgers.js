@@ -2,7 +2,7 @@ const displayModalButton = document.getElementById("displayModal");
 const closeModal = document.querySelector(".modal-close");
 const submitBtn = document.querySelector(".submitBtn");
 const listElement = document.querySelector(".burgerList");
-const reloadButton = document.querySelector(".reloadButton");
+const addBurger = document.querySelector(".addBurgerBtn");
 
 const displayModal = (event) => {
   const modal = document.querySelector(".modal");
@@ -32,7 +32,11 @@ const deleteItem = (element) => {
   });
 };
 
+const changeStyle = (event) => {
+  addBurger.classList.add("is-info");
+};
+
 displayModalButton.addEventListener("click", displayModal);
 closeModal.addEventListener("click", hideModal);
 submitBtn.addEventListener("click", hideModal);
-reloadButton.addEventListener("click", reloadPage);
+addBurger.addEventListener("hover", changeStyle);
