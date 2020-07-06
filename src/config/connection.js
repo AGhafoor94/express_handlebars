@@ -2,7 +2,6 @@ const mysql = require("mysql");
 let connection;
 
 const jawDBOptions = {
-  use_env_variable: "JAWSDB_URL",
   host: process.env.HOSTNAME,
   port: 3306,
   user: process.env.USERNAME,
