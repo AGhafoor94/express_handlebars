@@ -2,11 +2,12 @@ const mysql = require("mysql");
 let connection;
 
 const jawDBOptions = {
-  host: "lyl3nln24eqcxxot.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+  use_env_variable: "JAWSDB_URL",
+  host: process.env.HOSTNAME,
   port: 3306,
-  user: "l4u7z2v6lz1xk0e9",
-  password: "nubl93gtm43oclyk",
-  database: "otuqpo7lkqcvm8p4",
+  user: process.env.USERNAME,
+  password: process.env.PASSWORD,
+  database: process.env.DATABASE,
 };
 connection = mysql.createConnection(jawDBOptions);
 
