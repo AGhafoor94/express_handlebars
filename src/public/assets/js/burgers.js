@@ -22,15 +22,18 @@ const updateItem = (element) => {
   $.ajax({
     url: `/api/burgers/${id}`,
     type: "PUT",
+  }).then(() => {
+    location.reload();
   });
 };
 
 const deleteItem = (element) => {
   const id = element.getAttribute("data-id");
-  console.log(id);
   $.ajax({
     url: `/api/burgers/${id}`,
     type: "DELETE",
+  }).then(() => {
+    location.reload();
   });
 };
 

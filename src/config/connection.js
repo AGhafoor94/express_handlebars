@@ -8,7 +8,13 @@ const jawDBOptions = {
   password: process.env.PASSWORD,
   database: process.env.DATABASE,
 };
-connection = mysql.createConnection(jawDBOptions);
+//jawDBOptions
+connection = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "password",
+  database: "burgers_db",
+});
 
 const onConnect = (err) => {
   if (err) throw err;
